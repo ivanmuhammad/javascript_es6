@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Validation</title>
+    <link rel="stylesheet" href="css/validasi.css">
+  </head>
+  <body>
+        <h1>Form Validation Tiket</h1>
+        <div class="container">
+          <div class="frm">
+        <form id="data_form">
+          <div>
+            Nama :
+            <input type="text" name="nama" id="nama" placeholder="Maksimal 30 karakter" />
+            <p id="req_nama">isi nama</p>
+            <p id="char_nama">maxsimal 30 karakter</p>
+          </div>
+          <br />
+          <div>E-mail : <input type="email" name="email" id="email" placeholder="Email harus valid"/>
+            <p id="req_email">isi email</p>
+            <p id="valid_email">email harus valid</p>
+          </div>
+          <br />
+          <div>Jam Keberangkatan :<input type="time" name="jam" id="jam" />
+            <p id="req_jam">
+              isi jam keberangkatan
+            </p>
+          </div>
+          <br />
+          <div>Tujuan Keberangkatan :
+            <input type="text" name="tujuan" id="tujuan" placeholder="Tujuan keberangkatan"/>
+            <p id="req_tujuan">
+              isi tujuan keberangkatan
+            </p>
+          </div>
+          <br />
+          <div>
+            Jumlah Tiket :
+            <input type="number" name="tiket" id="tiket" placeholder="Maksimal 10 tiket"
+            />
+            <p id="req_tiket">
+              isi jumlah tiket
+            </p>
+            <p id="char_tiket">
+              maxsimal 10 tiket
+            </p>
+          </div>
+          <br />
+          <button type="button" id="lanjut">Submit</button>
+        </form>
+      </div>
+
+      <div class="validasi">
+        <h2>Tiket Anda</h2>
+        <label>Nama Pelanggan :</label>
+        <h4 id="hasil_nama"></h4>
+
+        <label>Email :</label>
+        <h4 id="hasil_email"></h4>
+
+        <label>Jam Keberangkatan :</label>
+        <h4 id="hasil_jam"></h4>
+
+        <label>Tujuan Keberangkatan :</label>
+        <h4 id="hasil_tujuan"></h4>
+
+        <label>Jumalah Tiket :</label>
+        <h4 id="hasil_tiket"></h4>
+      </div>
+    </div>
+  </body>
+
+  <script src="js/validasi.js"></script>
+</html>
