@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator Kurs Rupiah</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .container {
+        width: 100%;
+        justify-content: center;
+      }
+      .kurs {
+        display: flex;
+        justify-content: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="kurs">
+        <fieldset>
+          <legend>Kurs Rupiah - Mata Uang Asing</legend>
+          <table border="1">
+            <tr>
+              <th><b>Masukkan Nilai</b></th>
+              <th><b>Valas</b></th>
+              <th><b>Nilai Rupiah</b></th>
+            </tr>
+            <tr>
+              <td>
+                <input
+                  type="text"
+                  name="idr"
+                  id="idr"
+                  onchange="hitungKurs()"
+                />
+              </td>
+              <td>
+                <select id="kurs" name="kurslist" onchange="hitungKurs()">
+                  <option value="#">Pilih Mata Uang Asing</option>
+                  <option value="usd">Dollar US</option>
+                  <option value="sgd">Dollar Singapore</option>
+                  <option value="myr">Ringgit Malaysia</option>
+                  <option value="jpy">Yen Jepang</option>
+                  <option value="eur">Euro</option>
+                  <option value="sar">Riyal Arab Saudi</option>
+                </select>
+              </td>
+              <td>
+                <input
+                  type="text"
+                  name="hasil"
+                  id="hasil"
+                  disabled
+                  onchange="hitungKurs()"
+                />
+              </td>
+            </tr>
+          </table>
+        </fieldset>
+      </div>
+    </div>
+
+    <script src="js/calculator.js"></script>
+  </body>
+</html>
